@@ -14,17 +14,16 @@ public class CarControl : MonoBehaviour
     public float minPitch = 0.5f;
     public float pitchDenominator = 50f;
 
+    private AudioSource accelAudioSource;
+    private AudioSource brakeAudioSource;
+    private AudioSource idleAudioSource;
+
     public AudioClip carAcceleration;
     public AudioClip carIdle;
     public AudioClip carBrake;
 
-    bool wasAccelerating = false;
-    bool firstStartDone = false;
-
     WheelControl[] wheels;
     Rigidbody rigidBody;
-
-    AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -37,8 +36,12 @@ public class CarControl : MonoBehaviour
         // Find all child GameObjects that have the WheelControl script attached
         wheels = GetComponentsInChildren<WheelControl>();
 
-        audioSource = GetComponent<AudioSource>();
-        audioSource.pitch = audioPitch;
+        idleAudioSource = gameObject.AddComponent<AudioSource>();
+        brakeAudioSource = gameObject.AddComponent<AudioSource>();
+
+        idleAudioSource.clip = carIdle;
+        idleAudioSource.loop = true;
+        idleAudioSource.Play();
     }
 
     // Update is called once per frame
@@ -53,7 +56,7 @@ public class CarControl : MonoBehaviour
         float forwardSpeed = Vector3.Dot(transform.forward, rigidBody.velocity);
 
         // audio pitch determined by speed
-        audioSource.pitch = Mathf.Max(minPitch, Mathf.Abs(forwardSpeed / pitchDenominator));
+        idleAudioSource.pitch = Mathf.Max(minPitch, Mathf.Abs(forwardSpeed / pitchDenominator));
 
         // Calculate how close the car is to top speed
         // as a number from zero to one
@@ -70,22 +73,11 @@ public class CarControl : MonoBehaviour
         // Check whether the user input is in the same direction 
         // as the car's velocity
         bool isAccelerating = Mathf.Sign(vInput) == Mathf.Sign(forwardSpeed);
-        
-        if (!wasAccelerating && isAccelerating) {
-            // the vehicle was begins accelerating
-            if (!firstStartDone){
-                audioSource.Play();
-                firstStartDone = true;
-            } else {
-                audioSource.UnPause();
-            }
-        } else if(wasAccelerating && isAccelerating) {
-            // the vehicle continues to accelerate
-        } else if (wasAccelerating && !isAccelerating){
-            // the vehicle stops accelerating 
-            audioSource.Pause();
+
+        if(!isAccelerating && (vInput != 0)) {
+            // Brake
+            brakeAudioSource.PlayOneShot(carBrake, idleAudioSource.pitch/6);
         }
-        wasAccelerating = isAccelerating;
 
         foreach (var wheel in wheels)
         {
