@@ -1,3 +1,6 @@
-Muistilista:
-
-Auto prefabin y on 0.25 korkeammalla kuin autocolliderin pohja.
+TODO:
+- Hirvispawneri
+- Checkpointit
+- Nopeusmittari UI
+- Piirtopriot kuntoon tien ja puiden kanssa
+- Varjostus ja ambience
