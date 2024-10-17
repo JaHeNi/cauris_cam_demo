@@ -752,14 +752,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoints:
-  - {fileID: 1768130443}
-  - {fileID: 817165485}
-  - {fileID: 1850682433}
-  - {fileID: 1692013605}
-  - {fileID: 2014585676}
+  - {fileID: 1768130442}
+  - {fileID: 817165484}
+  - {fileID: 1850682432}
+  - {fileID: 1692013604}
+  - {fileID: 2014585675}
   deerPrefab: {fileID: 4838970111423589469, guid: ca0dce541d7415341be48fdb82b4e9c7,
     type: 3}
+  car: {fileID: 4970988327657585820}
   numberOfDeersToSpawn: 3
+  deerSpeed: 25
+  distanceToBumper: 20
 --- !u!4 &770077123
 Transform:
   m_ObjectHideFlags: 0
@@ -816,6 +819,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 817165485}
+  - component: {fileID: 817165486}
   m_Layer: 0
   m_Name: Spawn2
   m_TagString: Untagged
@@ -832,12 +836,26 @@ Transform:
   m_GameObject: {fileID: 817165484}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -43.95, y: 603.437, z: -258.55878}
+  m_LocalPosition: {x: -13.22, y: 603.437, z: -258.55878}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2018321911}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &817165486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817165484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b2bd50d2da69194b8cc1e4e5951848c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drawDistanceSphere: 1
+  activationDistance: 33.28
 --- !u!1 &821670630
 GameObject:
   m_ObjectHideFlags: 0
@@ -1648,6 +1666,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1692013605}
+  - component: {fileID: 1692013606}
   m_Layer: 0
   m_Name: Spawn4
   m_TagString: Untagged
@@ -1664,12 +1683,26 @@ Transform:
   m_GameObject: {fileID: 1692013604}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -149.05093, y: 607.95, z: -63.49}
+  m_LocalPosition: {x: -149.05093, y: 607.95, z: -46.57}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2018321911}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1692013606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692013604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b2bd50d2da69194b8cc1e4e5951848c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drawDistanceSphere: 1
+  activationDistance: 22.78
 --- !u!1 &1713797037
 GameObject:
   m_ObjectHideFlags: 0
@@ -1781,6 +1814,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1768130443}
+  - component: {fileID: 1768130444}
   m_Layer: 0
   m_Name: Spawn1
   m_TagString: Untagged
@@ -1797,12 +1831,26 @@ Transform:
   m_GameObject: {fileID: 1768130442}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.2, y: 611.33, z: -399.4}
+  m_LocalPosition: {x: 4.66, y: 611.33, z: -419.94}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2018321911}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1768130444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1768130442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b2bd50d2da69194b8cc1e4e5951848c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drawDistanceSphere: 1
+  activationDistance: 28.9
 --- !u!1 &1850682432
 GameObject:
   m_ObjectHideFlags: 0
@@ -1812,6 +1860,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1850682433}
+  - component: {fileID: 1850682434}
   m_Layer: 0
   m_Name: Spawn3
   m_TagString: Untagged
@@ -1828,12 +1877,26 @@ Transform:
   m_GameObject: {fileID: 1850682432}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -84.49, y: 606.67, z: -146.47174}
+  m_LocalPosition: {x: -70.89, y: 600.16, z: -115.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2018321911}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1850682434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850682432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b2bd50d2da69194b8cc1e4e5951848c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drawDistanceSphere: 1
+  activationDistance: 37.9
 --- !u!1 &2014585675
 GameObject:
   m_ObjectHideFlags: 0
@@ -1843,6 +1906,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2014585676}
+  - component: {fileID: 2014585677}
   m_Layer: 0
   m_Name: Spawn5
   m_TagString: Untagged
@@ -1859,12 +1923,26 @@ Transform:
   m_GameObject: {fileID: 2014585675}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -181.95, y: 607.48, z: 31.236572}
+  m_LocalPosition: {x: -199.63, y: 607.48, z: 39.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2018321911}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2014585677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014585675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b2bd50d2da69194b8cc1e4e5951848c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drawDistanceSphere: 1
+  activationDistance: 24.57
 --- !u!1 &2018321910
 GameObject:
   m_ObjectHideFlags: 0
