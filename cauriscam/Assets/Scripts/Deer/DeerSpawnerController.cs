@@ -6,20 +6,20 @@ public class DeerSpawnerController : MonoBehaviour
     public List<GameObject> spawnPoints = new List<GameObject>(); // Assign your spawn points in the inspector
     public GameObject deerPrefab; // Reference to your deer prefab
     public GameObject car; // Reference to your car object
-    public int numberOfDeersToSpawn; // Specify the number of deers to spawn in the inspector
+    public int numberOfDeerToSpawn; // Specify the number of deer to spawn in the inspector
     public float deerSpeed = 5f; // Speed at which the deer moves
     public float distanceToBumper = 10f; // Deer runs x units in front of the car
 
     void Start()
     {
-        SpawnDeers();
+        SpawnDeer();
     }
 
-    void SpawnDeers()
+    void SpawnDeer()
     {
         List<int> usedIndices = new List<int>();
 
-        for (int i = 0; i < numberOfDeersToSpawn; i++)
+        for (int i = 0; i < numberOfDeerToSpawn; i++)
         {
             int randomIndex;
             do
