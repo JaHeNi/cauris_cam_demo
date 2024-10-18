@@ -25,6 +25,9 @@ public class CarControl : MonoBehaviour
     WheelControl[] wheels;
     Rigidbody rigidBody;
 
+    public ParticleSystem fogParticleSystem;
+    public float fogSpeedDenominator = 2;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -54,6 +57,11 @@ public class CarControl : MonoBehaviour
         // Calculate current speed in relation to the forward direction of the car
         // (this returns a negative number when traveling backwards)
         float forwardSpeed = Vector3.Dot(transform.forward, rigidBody.velocity);
+
+        // fog speed handling: faster car -> fog should also move faster
+        float fogSpeed = forwardSpeed / fogSpeedDenominator;
+        var mainFog = fogParticleSystem.main;
+        mainFog.simulationSpeed = fogSpeed;
 
         // audio pitch determined by speed
         idleAudioSource.pitch = Mathf.Max(minPitch, Mathf.Abs(forwardSpeed / pitchDenominator));
