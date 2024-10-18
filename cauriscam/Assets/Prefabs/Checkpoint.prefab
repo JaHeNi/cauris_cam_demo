@@ -1,0 +1,247 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &745011257513098288
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6929648603489327497}
+  - component: {fileID: 1826203553894893778}
+  - component: {fileID: 6742104433722675560}
+  - component: {fileID: 4900641052490671064}
+  m_Layer: 0
+  m_Name: Checkpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6929648603489327497
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745011257513098288}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.09333859, z: -0, w: 0.99563444}
+  m_LocalPosition: {x: 464.69, y: -1.46, z: 43.82}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 9050616548176810251}
+  - {fileID: 8058131676153549484}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -10.711, z: 0}
+--- !u!114 &1826203553894893778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745011257513098288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 070de4cd9a668da44b785f0f726e8c70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activationAudio: {fileID: 8300000, guid: 1eebd3e45818a3d45bc1ad811bf44661, type: 3}
+--- !u!65 &6742104433722675560
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745011257513098288}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.47, y: 3.38, z: 7.54}
+  m_Center: {x: 0, y: 4.28, z: 0}
+--- !u!54 &4900641052490671064
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745011257513098288}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!1001 &2458944929630266890
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6929648603489327497}
+    m_Modifications:
+    - target: {fileID: 491887957720167436, guid: e07d91263ac9a3c4096b78370621fc0c,
+        type: 3}
+      propertyPath: m_Name
+      value: sign wild animals pillar Right
+      objectReference: {fileID: 0}
+    - target: {fileID: 6883139253703145217, guid: e07d91263ac9a3c4096b78370621fc0c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.49265447
+      objectReference: {fileID: 0}
+    - target: {fileID: 6883139253703145217, guid: e07d91263ac9a3c4096b78370621fc0c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.3246875
+      objectReference: {fileID: 0}
+    - target: {fileID: 6883139253703145217, guid: e07d91263ac9a3c4096b78370621fc0c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.759348
+      objectReference: {fileID: 0}
+    - target: {fileID: 6883139253703145217, guid: e07d91263ac9a3c4096b78370621fc0c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5489134
+      objectReference: {fileID: 0}
+    - target: {fileID: 6883139253703145217, guid: e07d91263ac9a3c4096b78370621fc0c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6883139253703145217, guid: e07d91263ac9a3c4096b78370621fc0c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.83587927
+      objectReference: {fileID: 0}
+    - target: {fileID: 6883139253703145217, guid: e07d91263ac9a3c4096b78370621fc0c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6883139253703145217, guid: e07d91263ac9a3c4096b78370621fc0c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6883139253703145217, guid: e07d91263ac9a3c4096b78370621fc0c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 113.415
+      objectReference: {fileID: 0}
+    - target: {fileID: 6883139253703145217, guid: e07d91263ac9a3c4096b78370621fc0c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e07d91263ac9a3c4096b78370621fc0c, type: 3}
+--- !u!4 &9050616548176810251 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6883139253703145217, guid: e07d91263ac9a3c4096b78370621fc0c,
+    type: 3}
+  m_PrefabInstance: {fileID: 2458944929630266890}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3481826486794675629
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6929648603489327497}
+    m_Modifications:
+    - target: {fileID: 491887957720167436, guid: e07d91263ac9a3c4096b78370621fc0c,
+        type: 3}
+      propertyPath: m_Name
+      value: sign wild animals pillar Left
+      objectReference: {fileID: 0}
+    - target: {fileID: 6883139253703145217, guid: e07d91263ac9a3c4096b78370621fc0c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 6883139253703145217, guid: e07d91263ac9a3c4096b78370621fc0c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.4246001
+      objectReference: {fileID: 0}
+    - target: {fileID: 6883139253703145217, guid: e07d91263ac9a3c4096b78370621fc0c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 6883139253703145217, guid: e07d91263ac9a3c4096b78370621fc0c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.80448675
+      objectReference: {fileID: 0}
+    - target: {fileID: 6883139253703145217, guid: e07d91263ac9a3c4096b78370621fc0c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6883139253703145217, guid: e07d91263ac9a3c4096b78370621fc0c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.59397066
+      objectReference: {fileID: 0}
+    - target: {fileID: 6883139253703145217, guid: e07d91263ac9a3c4096b78370621fc0c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6883139253703145217, guid: e07d91263ac9a3c4096b78370621fc0c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6883139253703145217, guid: e07d91263ac9a3c4096b78370621fc0c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -83.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 6883139253703145217, guid: e07d91263ac9a3c4096b78370621fc0c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e07d91263ac9a3c4096b78370621fc0c, type: 3}
+--- !u!4 &8058131676153549484 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6883139253703145217, guid: e07d91263ac9a3c4096b78370621fc0c,
+    type: 3}
+  m_PrefabInstance: {fileID: 3481826486794675629}
+  m_PrefabAsset: {fileID: 0}
