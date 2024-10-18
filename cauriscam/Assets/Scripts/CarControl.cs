@@ -1,8 +1,10 @@
 using UnityEngine;
+using TMPro;
 
 public class CarControl : MonoBehaviour
 {
     
+    // Motor
     public float motorTorque = 2000;
     public float brakeTorque = 2000;
     public float maxSpeed = 20;
@@ -10,6 +12,13 @@ public class CarControl : MonoBehaviour
     public float steeringRangeAtMaxSpeed = 10;
     public float centreOfGravityOffset = -1f;
 
+    private bool caurisCamOn = false;
+    public TextMeshProUGUI caurisCamStatusText;
+
+    private string caurisCamOnlineString = "CaurisCam ONLINE";
+    private string caurisCamOfflineString = "CaurisCam OFFLINE";
+
+    // Audio
     public float audioPitch = 0.75f;
     public float minPitch = 0.5f;
     public float pitchDenominator = 50f;
@@ -17,17 +26,22 @@ public class CarControl : MonoBehaviour
     private AudioSource accelAudioSource;
     private AudioSource brakeAudioSource;
     private AudioSource idleAudioSource;
+    private AudioSource warningAudioSource;
 
     public AudioClip carAcceleration;
     public AudioClip carIdle;
     public AudioClip carBrake;
 
+    public AudioClip warning;
+
     WheelControl[] wheels;
     Rigidbody rigidBody;
 
+    // Fog
     public ParticleSystem fogParticleSystem;
     public float fogSpeedDenominator = 5;
 
+    // Rain
     public ParticleSystem rainParticleSystem;
     public float rainSpeedDenominator = 2;
 
@@ -44,15 +58,39 @@ public class CarControl : MonoBehaviour
 
         idleAudioSource = gameObject.AddComponent<AudioSource>();
         brakeAudioSource = gameObject.AddComponent<AudioSource>();
+        
+        warningAudioSource = gameObject.AddComponent<AudioSource>();
+        warningAudioSource.clip = warning;
 
         idleAudioSource.clip = carIdle;
         idleAudioSource.loop = true;
         idleAudioSource.Play();
+
+        caurisCamStatusText.text = caurisCamOfflineString;
+    }
+
+    public void PlayWarning(){
+        if(caurisCamOn){
+            warningAudioSource.Play();
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        if(Input.GetKeyDown(KeyCode.P)){
+            // Toggle cauriscam
+            if(caurisCamOn){
+                // Toggle off
+                caurisCamOn = false;
+                caurisCamStatusText.text = caurisCamOfflineString;
+            } else {
+                // Toggle off
+                caurisCamOn = true;
+                caurisCamStatusText.text = caurisCamOnlineString;
+            }
+        }
 
         float vInput = Input.GetAxis("Vertical");
         float hInput = Input.GetAxis("Horizontal");

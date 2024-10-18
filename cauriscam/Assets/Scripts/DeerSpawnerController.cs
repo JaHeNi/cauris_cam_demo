@@ -10,6 +10,9 @@ public class DeerEventController : MonoBehaviour
     public float bufferDistance = 2f; // Small distance in front of the car
     public float averageSpawnInterval = 10f; // Average time between spawns
 
+    public HitCounter hitcounter;
+    public CarControl cc;
+
     void Start()
     {
         StartCoroutine(SpawnDeer());
@@ -41,8 +44,10 @@ public class DeerEventController : MonoBehaviour
 
             GameObject deer = Instantiate(deerPrefab, spawnPosition, Quaternion.identity);
             Deer deerScript = deer.GetComponent<Deer>();
+            deerScript.SetHitCounter(hitcounter);
             deerScript.SetDirection(direction);
             deerScript.SetSpeed(deerSpeed);
+            cc.PlayWarning();
         }
     }
 }
