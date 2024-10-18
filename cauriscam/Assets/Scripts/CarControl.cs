@@ -26,7 +26,10 @@ public class CarControl : MonoBehaviour
     Rigidbody rigidBody;
 
     public ParticleSystem fogParticleSystem;
-    public float fogSpeedDenominator = 2;
+    public float fogSpeedDenominator = 5;
+
+    public ParticleSystem rainParticleSystem;
+    public float rainSpeedDenominator = 2;
 
     // Start is called before the first frame update
     void Start()
@@ -62,6 +65,11 @@ public class CarControl : MonoBehaviour
         float fogSpeed = forwardSpeed / fogSpeedDenominator;
         var mainFog = fogParticleSystem.main;
         mainFog.simulationSpeed = fogSpeed;
+
+        // increase rain speed similarly, simulation speed increases both emission and particle speed
+        float rainSpeed = forwardSpeed / rainSpeedDenominator;
+        var mainRain = rainParticleSystem.main;
+        mainRain.simulationSpeed = Mathf.Max(rainSpeed, 1); // keep the rain going also if going backwards or sitting still
 
         // audio pitch determined by speed
         idleAudioSource.pitch = Mathf.Max(minPitch, Mathf.Abs(forwardSpeed / pitchDenominator));
