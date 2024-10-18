@@ -23,9 +23,9 @@ public class CheckpointHandler : MonoBehaviour
         var checkpointsActive = checkpoints.FindAll(checkpoint => checkpoint.isActive()).Count;
         var checkpointsTotal = checkpoints.Count;
 
-        //if (checkpointsActive == checkpointsTotal) {
-        //    // JOTAIN HAUSKAA
-        //}
+        if (checkpointsActive == checkpointsTotal) {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("DoneScene");
+        }
 
         checkpointText.text = "Checkpoint: " + checkpointsActive + " / " + checkpointsTotal;
     }
