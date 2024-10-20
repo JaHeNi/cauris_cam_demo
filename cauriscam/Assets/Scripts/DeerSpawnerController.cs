@@ -5,10 +5,10 @@ public class DeerEventController : MonoBehaviour
 {
     public GameObject deerPrefab;
     public Transform car;
-    public float deerSpeed = 7f;
-    public float spawnDistanceFromCar = 30f; // Distance directly in front of the car
-    public float bufferDistance = 2f; // Small distance in front of the car
-    public float averageSpawnInterval = 10f; // Average time between spawns
+    public float deerSpeed = 8f;
+    public float spawnDistanceFromCar = 20f; // Distance directly in front of the car
+    public float bufferDistance = 1f; // Small distance in front of the car
+    public float averageSpawnInterval = 15f; // Average time between spawns
 
     public HitCounter hitcounter;
     public CarControl cc;

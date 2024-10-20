@@ -692,9 +692,9 @@ MonoBehaviour:
     type: 3}
   car: {fileID: 78316471}
   deerSpeed: 7
-  spawnDistanceFromCar: 20
+  spawnDistanceFromCar: 25
   bufferDistance: 2
-  averageSpawnInterval: 10
+  averageSpawnInterval: 20
   hitcounter: {fileID: 1749949801}
   cc: {fileID: 78316472}
 --- !u!4 &668168242

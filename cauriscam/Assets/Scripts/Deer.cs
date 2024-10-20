@@ -32,6 +32,12 @@ public class Deer : MonoBehaviour
 
     void Update()
     {
+        // Ensure the deer stays on the terrain
+        Vector3 position = transform.position;
+        position.y = Terrain.activeTerrain.SampleHeight(position);
+        transform.position = position;
+
+        // Run forwards
         transform.position += direction * speed * Time.deltaTime;
         RotateTowardsDirection();
     }
