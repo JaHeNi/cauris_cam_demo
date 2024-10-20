@@ -92,9 +92,26 @@ public class CarControl : MonoBehaviour
             }
         }
 
+        // Get keyboard input
         float vInput = Input.GetAxis("Vertical");
         float hInput = Input.GetAxis("Horizontal");
 
+        // Get Logitech G29 input
+        if (LogitechGSDK.LogiUpdate() && LogitechGSDK.LogiIsConnected(0))
+        {
+            var state = LogitechGSDK.LogiGetStateUnity(0);
+
+            // Steering
+            hInput = state.lX / 32768f; // Normalize to -1 to 1
+
+            // Pedals (accelerator and brake)
+            float accelerator = (32768f - state.lY) / 32768f; // Normalize to 0 to 1
+            float brake = (32768f - state.lRz) / 32768f; // Normalize to 0 to 1
+
+            // Move the car
+            vInput = accelerator - brake; // Combine accelerator and brake inputs
+
+        }
         // Calculate current speed in relation to the forward direction of the car
         // (this returns a negative number when traveling backwards)
         float forwardSpeed = Vector3.Dot(transform.forward, rigidBody.velocity);
