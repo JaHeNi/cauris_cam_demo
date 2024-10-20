@@ -1,3 +1,1 @@
-TODO:
-- Checkpointit
-- Kolmannen persoonan hidastus crashcam
+CaurisCam demo - riistakolarisimulaattori v.1.0
