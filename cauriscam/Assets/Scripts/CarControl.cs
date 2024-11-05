@@ -37,9 +37,11 @@ public class CarControl : MonoBehaviour
     WheelControl[] wheels;
     Rigidbody rigidBody;
 
+    /*
     // Fog
     public ParticleSystem fogParticleSystem;
     public float fogSpeedDenominator = 5;
+    */
 
     // Rain
     public ParticleSystem rainParticleSystem;
@@ -116,10 +118,12 @@ public class CarControl : MonoBehaviour
         // (this returns a negative number when traveling backwards)
         float forwardSpeed = Vector3.Dot(transform.forward, rigidBody.velocity);
 
+        /*
         // fog speed handling: faster car -> fog should also move faster
         float fogSpeed = forwardSpeed / fogSpeedDenominator;
         var mainFog = fogParticleSystem.main;
         mainFog.simulationSpeed = fogSpeed;
+        */
 
         // increase rain speed similarly, simulation speed increases both emission and particle speed
         float rainSpeed = forwardSpeed / rainSpeedDenominator;
