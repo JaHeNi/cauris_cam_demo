@@ -966,6 +966,7 @@ MonoBehaviour:
   - {fileID: 1594536666}
   - {fileID: 1258293467}
   checkpointText: {fileID: 839203130}
+  car: {fileID: 78316468}
 --- !u!114 &839203130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2060,7 +2061,7 @@ PrefabInstance:
     - target: {fileID: 6929648603489327497, guid: c20a929fbeaaea44986d597ce9227155,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 138.42209
+      value: 138.321
       objectReference: {fileID: 0}
     - target: {fileID: 6929648603489327497, guid: c20a929fbeaaea44986d597ce9227155,
         type: 3}
@@ -2070,7 +2071,7 @@ PrefabInstance:
     - target: {fileID: 6929648603489327497, guid: c20a929fbeaaea44986d597ce9227155,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 32.39985
+      value: 32.381
       objectReference: {fileID: 0}
     - target: {fileID: 6929648603489327497, guid: c20a929fbeaaea44986d597ce9227155,
         type: 3}
@@ -2391,42 +2392,42 @@ PrefabInstance:
     - target: {fileID: 7024029950362718879, guid: 8b99435b6dedcfa45a7021eb9f90663d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.34199864
+      value: -0.342
       objectReference: {fileID: 0}
     - target: {fileID: 7024029950362718879, guid: 8b99435b6dedcfa45a7021eb9f90663d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.2999998
+      value: 1.272
       objectReference: {fileID: 0}
     - target: {fileID: 7024029950362718879, guid: 8b99435b6dedcfa45a7021eb9f90663d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.17599988
+      value: -0.078
       objectReference: {fileID: 0}
     - target: {fileID: 7024029950362718879, guid: 8b99435b6dedcfa45a7021eb9f90663d,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.99786216
       objectReference: {fileID: 0}
     - target: {fileID: 7024029950362718879, guid: 8b99435b6dedcfa45a7021eb9f90663d,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: 0.065354854
       objectReference: {fileID: 0}
     - target: {fileID: 7024029950362718879, guid: 8b99435b6dedcfa45a7021eb9f90663d,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7024029950362718879, guid: 8b99435b6dedcfa45a7021eb9f90663d,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.000000011175871
       objectReference: {fileID: 0}
     - target: {fileID: 7024029950362718879, guid: 8b99435b6dedcfa45a7021eb9f90663d,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 7.494
       objectReference: {fileID: 0}
     - target: {fileID: 7558858829533183779, guid: 8b99435b6dedcfa45a7021eb9f90663d,
         type: 3}
