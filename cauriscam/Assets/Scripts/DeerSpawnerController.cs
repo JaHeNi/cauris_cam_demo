@@ -13,9 +13,38 @@ public class DeerEventController : MonoBehaviour
     public HitCounter hitcounter;
     public CarControl cc;
 
+    public AudioClip warningAudio;
+
+    private AudioSource activeDeerAudioSource = null;
+    private GameObject activeDeer = null;
+
     void Start()
     {
         StartCoroutine(SpawnDeer());
+    }
+
+    void Update()
+    {
+        if (activeDeerAudioSource != null)
+        {
+            float deerDistanceToCar = Vector3.Distance(activeDeer.transform.position, car.transform.position);
+            Vector3 deerRelativePosition = activeDeer.transform.position - car.transform.position;
+            float maxWarningPitch = 3.0f;
+            float minWarningPitch = 1.0f;
+            float basePitch = 20.0f;
+            float despawnDistance = 5.0f;
+
+            bool deerInFront = Vector3.Dot(car.transform.forward, deerRelativePosition) > 0.0f;
+
+            activeDeerAudioSource.pitch = Mathf.Min(maxWarningPitch, Mathf.Max(minWarningPitch, basePitch / deerDistanceToCar));
+
+            if ((deerDistanceToCar > despawnDistance) && !deerInFront)
+            {
+                Destroy(activeDeer);
+                activeDeer = null;
+                activeDeerAudioSource = null;
+            }
+        }
     }
 
     IEnumerator SpawnDeer()
@@ -43,11 +72,22 @@ public class DeerEventController : MonoBehaviour
             }
 
             GameObject deer = Instantiate(deerPrefab, spawnPosition, Quaternion.identity);
+            activeDeer = deer;
+
+            // make deer play warning :D:D
+            AudioSource warningAudioSource = deer.AddComponent<AudioSource>();
+            activeDeerAudioSource = warningAudioSource;
+            warningAudioSource.clip = warningAudio;
+            warningAudioSource.loop = true;
+            warningAudioSource.Play();
+
             Deer deerScript = deer.GetComponent<Deer>();
             deerScript.SetHitCounter(hitcounter);
             deerScript.SetDirection(direction);
             deerScript.SetSpeed(deerSpeed);
-            cc.PlayWarning();
+            
+            // make car play warning
+            //cc.PlayWarning();
         }
     }
 }

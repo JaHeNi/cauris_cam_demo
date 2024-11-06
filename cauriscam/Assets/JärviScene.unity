@@ -703,6 +703,7 @@ MonoBehaviour:
   averageSpawnInterval: 20
   hitcounter: {fileID: 1749949801}
   cc: {fileID: 78316472}
+  warningAudio: {fileID: 8300000, guid: 372d33052a0155a43971afc44e7a73c9, type: 3}
 --- !u!4 &668168242
 Transform:
   m_ObjectHideFlags: 0
@@ -2168,7 +2169,7 @@ PrefabInstance:
         type: 3}
       propertyPath: warning
       value: 
-      objectReference: {fileID: 8300000, guid: 13076e2ea29404647b24b6df80b50f87, type: 3}
+      objectReference: {fileID: 8300000, guid: 372d33052a0155a43971afc44e7a73c9, type: 3}
     - target: {fileID: 1696301608876839696, guid: 8b99435b6dedcfa45a7021eb9f90663d,
         type: 3}
       propertyPath: fogParticleSystem

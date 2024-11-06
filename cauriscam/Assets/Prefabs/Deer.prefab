@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &5757307299713487116
+--- !u!1001 &517679604603369177
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -31,17 +31,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 78ab6b46f6759214da2ad0b057cbf85a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 492.62952
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 78ab6b46f6759214da2ad0b057cbf85a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.7761252
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 78ab6b46f6759214da2ad0b057cbf85a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 48.705956
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 78ab6b46f6759214da2ad0b057cbf85a,
         type: 3}
@@ -81,7 +81,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 78ab6b46f6759214da2ad0b057cbf85a,
         type: 3}
       propertyPath: m_Name
-      value: Deer_001
+      value: Deer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -90,46 +90,46 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 78ab6b46f6759214da2ad0b057cbf85a,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: -7965119493774252440}
+      addedObject: {fileID: 9129157976169855590}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 78ab6b46f6759214da2ad0b057cbf85a,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 9197508278236129067}
+      addedObject: {fileID: 3612108200869852858}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 78ab6b46f6759214da2ad0b057cbf85a,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3897702612087436821}
+      addedObject: {fileID: 3430821690851811769}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 78ab6b46f6759214da2ad0b057cbf85a,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4828491416013671602}
+      addedObject: {fileID: 4518231103994716298}
   m_SourcePrefab: {fileID: 100100000, guid: 78ab6b46f6759214da2ad0b057cbf85a, type: 3}
---- !u!1 &4838970111423589469 stripped
+--- !u!1 &859698290979244936 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 78ab6b46f6759214da2ad0b057cbf85a,
     type: 3}
-  m_PrefabInstance: {fileID: 5757307299713487116}
+  m_PrefabInstance: {fileID: 517679604603369177}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &-7965119493774252440
+--- !u!114 &9129157976169855590
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4838970111423589469}
+  m_GameObject: {fileID: 859698290979244936}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7dd2eccd2895fc04fbe79bf9d5ee16b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hitcounter: {fileID: 0}
---- !u!65 &9197508278236129067
+--- !u!65 &3612108200869852858
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4838970111423589469}
+  m_GameObject: {fileID: 859698290979244936}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -144,13 +144,13 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.55, y: 3.22, z: 1.75}
   m_Center: {x: 0, y: 0.87, z: 0.18}
---- !u!54 &3897702612087436821
+--- !u!54 &3430821690851811769
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4838970111423589469}
+  m_GameObject: {fileID: 859698290979244936}
   serializedVersion: 4
   m_Mass: 500
   m_Drag: 0
@@ -171,13 +171,13 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!82 &4828491416013671602
+--- !u!82 &4518231103994716298
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4838970111423589469}
+  m_GameObject: {fileID: 859698290979244936}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
