@@ -9,6 +9,7 @@ public class DeerEventController : MonoBehaviour
     public float spawnDistanceFromCar = 20f; // Distance directly in front of the car
     public float bufferDistance = 1f; // Small distance in front of the car
     public float averageSpawnInterval = 15f; // Average time between spawns
+    public DeerWarning arrowIndicator;
 
     public HitCounter hitcounter;
     public CarControl cc;
@@ -60,13 +61,15 @@ public class DeerEventController : MonoBehaviour
 
             Vector3 spawnPosition;
             Vector3 direction;
-            if (Random.value > 0.5f)
+            if (Random.value > 0.5f) // Deer spawns to the right
             {
+                arrowIndicator.UpdateArrowImage("right");
                 spawnPosition = car.position + car.forward * spawnDistanceFromCar + car.right * spawnDistanceToRightOrLeft; // Slightly more forward
                 direction = -car.right; // Deer runs to the left
             }
-            else
+            else // Deer spawns to the left
             {
+                arrowIndicator.UpdateArrowImage("left");
                 spawnPosition = car.position + car.forward * spawnDistanceFromCar - car.right * spawnDistanceToRightOrLeft; // Slightly more forward
                 direction = car.right; // Deer runs to the right
             }

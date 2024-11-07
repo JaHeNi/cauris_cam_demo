@@ -22,6 +22,6 @@ public class HitCounter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        hitText.text = hits + " accidents by far...";
+        hitText.text = hits + " accidents so far...";
     }
 }
