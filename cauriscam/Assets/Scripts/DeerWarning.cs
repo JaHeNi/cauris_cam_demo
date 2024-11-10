@@ -11,9 +11,10 @@ public class DeerWarning : MonoBehaviour
     public Sprite emptyPlaceholder; // Reference to the empty image
     private int timeOnScreen = 2;  // How long the warning stays on screen before disappearing
     private float blinkInterval = 0.2f; // Interval for blinking in seconds
-
+    private CarControl carScript;
     void Start()
     {
+        carScript = FindObjectOfType<CarControl>();
         // Initialize the arrowImage to null so no image is displayed initially
         arrowImage.sprite = emptyPlaceholder;
     }
@@ -23,16 +24,20 @@ public class DeerWarning : MonoBehaviour
     {
         StopAllCoroutines(); // Stop any existing coroutines
 
-        if (leftOrRight == "left")
+        if (carScript.caurisCamOn)
         {
-            // Enemy is to the left
-            arrowImage.sprite = leftArrow;
+            if (leftOrRight == "left")
+            {
+                // Enemy is to the left
+                arrowImage.sprite = leftArrow;
+            }
+            else
+            {
+                // Enemy is to the right
+                arrowImage.sprite = rightArrow;
+            }
         }
-        else
-        {
-            // Enemy is to the right
-            arrowImage.sprite = rightArrow;
-        }
+
 
         // Start the coroutine to change the image to an empty placeholder after a delay 
         StartCoroutine(ChangeToCircleAfterDelay());

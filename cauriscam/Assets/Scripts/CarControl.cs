@@ -12,7 +12,7 @@ public class CarControl : MonoBehaviour
     public float steeringRangeAtMaxSpeed = 10;
     public float centreOfGravityOffset = -1f;
 
-    private bool caurisCamOn = false;
+    public bool caurisCamOn = false;
     public TextMeshProUGUI caurisCamStatusText;
 
     private string caurisCamOnlineString = "CaurisCam ONLINE";
