@@ -104,7 +104,7 @@ public class CarControl : MonoBehaviour
             var state = LogitechGSDK.LogiGetStateUnity(0);
 
             // Steering
-            hInput = state.lX / 32768f; // Normalize to -1 to 1
+            hInput = (state.lX / 32768f)/1.2f; // Normalize to -1 to 1
 
             // Pedals (accelerator and brake)
             float accelerator = (32768f - state.lY) / 32768f; // Normalize to 0 to 1
