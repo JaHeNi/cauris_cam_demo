@@ -78,11 +78,16 @@ public class DeerEventController : MonoBehaviour
             activeDeer = deer;
 
             // make deer play warning :D:D
-            AudioSource warningAudioSource = deer.AddComponent<AudioSource>();
-            activeDeerAudioSource = warningAudioSource;
-            warningAudioSource.clip = warningAudio;
-            warningAudioSource.loop = true;
-            warningAudioSource.Play();
+
+            if(cc.caurisCamOn){
+                AudioSource warningAudioSource = deer.AddComponent<AudioSource>();
+                activeDeerAudioSource = warningAudioSource;
+                warningAudioSource.clip = warningAudio;
+                //warningAudioSource.volume = 1.0f;
+                warningAudioSource.loop = true;
+                //warningAudioSource.spatialBlend = 1.0f;
+                warningAudioSource.Play();
+            }
 
             Deer deerScript = deer.GetComponent<Deer>();
             deerScript.SetHitCounter(hitcounter);
